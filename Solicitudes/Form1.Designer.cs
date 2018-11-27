@@ -31,30 +31,30 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_printONE = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
+            this.btn_printONE = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.mtb_fIngreso = new System.Windows.Forms.MaskedTextBox();
-            this.mtb_fExamenAnterior = new System.Windows.Forms.MaskedTextBox();
-            this.mtb_fNacimiento = new System.Windows.Forms.MaskedTextBox();
-            this.mtb_fExamen = new System.Windows.Forms.MaskedTextBox();
-            this.tb_nombre = new System.Windows.Forms.TextBox();
-            this.cb_grado = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cb_grado = new System.Windows.Forms.ComboBox();
+            this.tb_nombre = new System.Windows.Forms.TextBox();
+            this.mtb_fExamen = new System.Windows.Forms.MaskedTextBox();
+            this.mtb_fNacimiento = new System.Windows.Forms.MaskedTextBox();
+            this.mtb_fExamenAnterior = new System.Windows.Forms.MaskedTextBox();
+            this.mtb_fIngreso = new System.Windows.Forms.MaskedTextBox();
             this.btn_imprimir = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -77,18 +77,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(154, 39);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
-            // btn_printONE
-            // 
-            this.btn_printONE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_printONE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_printONE.Location = new System.Drawing.Point(80, 3);
-            this.btn_printONE.Name = "btn_printONE";
-            this.btn_printONE.Size = new System.Drawing.Size(71, 33);
-            this.btn_printONE.TabIndex = 7;
-            this.btn_printONE.Text = "PRINT 1";
-            this.btn_printONE.UseVisualStyleBackColor = true;
-            this.btn_printONE.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btn_guardar
             // 
             this.btn_guardar.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -100,6 +88,18 @@
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
+            // 
+            // btn_printONE
+            // 
+            this.btn_printONE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_printONE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_printONE.Location = new System.Drawing.Point(80, 3);
+            this.btn_printONE.Name = "btn_printONE";
+            this.btn_printONE.Size = new System.Drawing.Size(71, 33);
+            this.btn_printONE.TabIndex = 7;
+            this.btn_printONE.Text = "PRINT 1";
+            this.btn_printONE.UseVisualStyleBackColor = true;
+            this.btn_printONE.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -137,59 +137,59 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(154, 399);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // mtb_fIngreso
+            // label1
             // 
-            this.mtb_fIngreso.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtb_fIngreso.Location = new System.Drawing.Point(3, 366);
-            this.mtb_fIngreso.Mask = "00/00/0000";
-            this.mtb_fIngreso.Name = "mtb_fIngreso";
-            this.mtb_fIngreso.Size = new System.Drawing.Size(148, 22);
-            this.mtb_fIngreso.TabIndex = 5;
-            this.mtb_fIngreso.ValidatingType = typeof(System.DateTime);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Fecha Examen:";
             // 
-            // mtb_fExamenAnterior
+            // label2
             // 
-            this.mtb_fExamenAnterior.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtb_fExamenAnterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtb_fExamenAnterior.Location = new System.Drawing.Point(3, 300);
-            this.mtb_fExamenAnterior.Mask = "00/00/0000";
-            this.mtb_fExamenAnterior.Name = "mtb_fExamenAnterior";
-            this.mtb_fExamenAnterior.Size = new System.Drawing.Size(148, 22);
-            this.mtb_fExamenAnterior.TabIndex = 4;
-            this.mtb_fExamenAnterior.ValidatingType = typeof(System.DateTime);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Grado Actual:";
             // 
-            // mtb_fNacimiento
+            // label3
             // 
-            this.mtb_fNacimiento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtb_fNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtb_fNacimiento.Location = new System.Drawing.Point(3, 234);
-            this.mtb_fNacimiento.Mask = "00/00/0000";
-            this.mtb_fNacimiento.Name = "mtb_fNacimiento";
-            this.mtb_fNacimiento.Size = new System.Drawing.Size(148, 22);
-            this.mtb_fNacimiento.TabIndex = 3;
-            this.mtb_fNacimiento.ValidatingType = typeof(System.DateTime);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Nombre:";
             // 
-            // mtb_fExamen
+            // label4
             // 
-            this.mtb_fExamen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtb_fExamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtb_fExamen.Location = new System.Drawing.Point(3, 36);
-            this.mtb_fExamen.Mask = "00/00/0000";
-            this.mtb_fExamen.Name = "mtb_fExamen";
-            this.mtb_fExamen.Size = new System.Drawing.Size(148, 22);
-            this.mtb_fExamen.TabIndex = 1;
-            this.mtb_fExamen.TabStop = false;
-            this.mtb_fExamen.ValidatingType = typeof(System.DateTime);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 198);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Fecha Nacimiento:";
             // 
-            // tb_nombre
+            // label5
             // 
-            this.tb_nombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tb_nombre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tb_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_nombre.Location = new System.Drawing.Point(3, 168);
-            this.tb_nombre.Name = "tb_nombre";
-            this.tb_nombre.Size = new System.Drawing.Size(148, 22);
-            this.tb_nombre.TabIndex = 2;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 264);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 16);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Fecha Examen Ant:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 330);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 16);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Fecha Ingreso:";
             // 
             // cb_grado
             // 
@@ -220,59 +220,59 @@
             this.cb_grado.Size = new System.Drawing.Size(148, 24);
             this.cb_grado.TabIndex = 1;
             // 
-            // label6
+            // tb_nombre
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 330);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Fecha Ingreso:";
+            this.tb_nombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_nombre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tb_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_nombre.Location = new System.Drawing.Point(3, 168);
+            this.tb_nombre.Name = "tb_nombre";
+            this.tb_nombre.Size = new System.Drawing.Size(148, 22);
+            this.tb_nombre.TabIndex = 2;
             // 
-            // label5
+            // mtb_fExamen
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 264);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 16);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Fecha Examen Ant:";
+            this.mtb_fExamen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtb_fExamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtb_fExamen.Location = new System.Drawing.Point(3, 36);
+            this.mtb_fExamen.Mask = "00/00/0000";
+            this.mtb_fExamen.Name = "mtb_fExamen";
+            this.mtb_fExamen.Size = new System.Drawing.Size(148, 22);
+            this.mtb_fExamen.TabIndex = 1;
+            this.mtb_fExamen.TabStop = false;
+            this.mtb_fExamen.ValidatingType = typeof(System.DateTime);
             // 
-            // label4
+            // mtb_fNacimiento
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 198);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Fecha Nacimiento:";
+            this.mtb_fNacimiento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtb_fNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtb_fNacimiento.Location = new System.Drawing.Point(3, 234);
+            this.mtb_fNacimiento.Mask = "00/00/0000";
+            this.mtb_fNacimiento.Name = "mtb_fNacimiento";
+            this.mtb_fNacimiento.Size = new System.Drawing.Size(148, 22);
+            this.mtb_fNacimiento.TabIndex = 3;
+            this.mtb_fNacimiento.ValidatingType = typeof(System.DateTime);
             // 
-            // label3
+            // mtb_fExamenAnterior
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nombre:";
+            this.mtb_fExamenAnterior.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtb_fExamenAnterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtb_fExamenAnterior.Location = new System.Drawing.Point(3, 300);
+            this.mtb_fExamenAnterior.Mask = "00/00/0000";
+            this.mtb_fExamenAnterior.Name = "mtb_fExamenAnterior";
+            this.mtb_fExamenAnterior.Size = new System.Drawing.Size(148, 22);
+            this.mtb_fExamenAnterior.TabIndex = 4;
+            this.mtb_fExamenAnterior.ValidatingType = typeof(System.DateTime);
             // 
-            // label2
+            // mtb_fIngreso
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Grado Actual:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Fecha Examen:";
+            this.mtb_fIngreso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtb_fIngreso.Location = new System.Drawing.Point(3, 366);
+            this.mtb_fIngreso.Mask = "00/00/0000";
+            this.mtb_fIngreso.Name = "mtb_fIngreso";
+            this.mtb_fIngreso.Size = new System.Drawing.Size(148, 22);
+            this.mtb_fIngreso.TabIndex = 5;
+            this.mtb_fIngreso.ValidatingType = typeof(System.DateTime);
             // 
             // btn_imprimir
             // 
@@ -313,36 +313,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(634, 399);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Column5
+            // Column6
             // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column5.HeaderText = "F Ingreso";
-            this.Column5.Name = "Column5";
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column5.Width = 70;
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column6.HeaderText = "F Examen";
+            this.Column6.Name = "Column6";
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column6.Width = 73;
             // 
-            // Column4
+            // Column7
             // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column4.HeaderText = "Examen Anterior";
-            this.Column4.Name = "Column4";
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column3.HeaderText = "Edad";
-            this.Column3.Name = "Column3";
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.Width = 57;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column2.HeaderText = "F Nacimiento";
-            this.Column2.Name = "Column2";
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 87;
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column7.HeaderText = "Grado Actual";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 87;
             // 
             // Column1
             // 
@@ -352,20 +336,36 @@
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column1.Width = 69;
             // 
-            // Column7
+            // Column2
             // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column7.HeaderText = "Grado Actual";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 87;
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column2.HeaderText = "F Nacimiento";
+            this.Column2.Name = "Column2";
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Width = 87;
             // 
-            // Column6
+            // Column3
             // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column6.HeaderText = "F Examen";
-            this.Column6.Name = "Column6";
-            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column6.Width = 73;
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column3.HeaderText = "Edad";
+            this.Column3.Name = "Column3";
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column3.Width = 57;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column4.HeaderText = "Examen Anterior";
+            this.Column4.Name = "Column4";
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column5.HeaderText = "F Ingreso";
+            this.Column5.Name = "Column5";
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column5.Width = 70;
             // 
             // tableLayoutPanel1
             // 
