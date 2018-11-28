@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Solicitudes
 {
-    public partial class frm_Inicio : Form
+    public partial class frm_CintasNegras : Form
     {
-        public frm_Inicio()
+        public frm_CintasNegras()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frm_Kups form = new frm_Kups();
-            form.ShowDialog();
         }
     }
 }

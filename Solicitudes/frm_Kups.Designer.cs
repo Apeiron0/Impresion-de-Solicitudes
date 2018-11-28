@@ -1,6 +1,6 @@
 ﻿namespace Solicitudes
 {
-    partial class Form1
+    partial class frm_Kups
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Kups));
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_printONE = new System.Windows.Forms.Button();
@@ -386,15 +386,15 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // Form1
+            // frm_Kups
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
-            this.Text = "Imprimir Solicitudes";
+            this.Name = "frm_Kups";
+            this.Text = "Solicitudes Kups";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

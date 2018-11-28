@@ -14,7 +14,7 @@ using System.Resources;
 
 namespace Solicitudes
 {
-    public partial class Form1 : Form
+    public partial class frm_Kups : Form
     {
         #region Variables Globales
 
@@ -23,7 +23,7 @@ namespace Solicitudes
         
         #endregion
 
-        public Form1()
+        public frm_Kups()
         {
             InitializeComponent();
         }

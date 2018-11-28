@@ -83,11 +83,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsINFOMADE.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="frm_CintasNegras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frm_CintasNegras.Designer.cs">
+      <DependentUpon>frm_CintasNegras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Kups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Kups.Designer.cs">
+      <DependentUpon>frm_Kups.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Inicio.cs">
       <SubType>Form</SubType>
@@ -97,8 +103,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frm_CintasNegras.resx">
+      <DependentUpon>frm_CintasNegras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Kups.resx">
+      <DependentUpon>frm_Kups.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Inicio.resx">
       <DependentUpon>frm_Inicio.cs</DependentUpon>
