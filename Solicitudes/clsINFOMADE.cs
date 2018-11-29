@@ -9,9 +9,15 @@ namespace Solicitudes
     public class clsINFOMADE
     {
         public string calcular_edad(DateTime  fNacimiento)
-        {                        
-            int edad = DateTime.Today.AddTicks(-fNacimiento.Ticks).Year - 1;
-            return edad.ToString();
+        {
+            //int edad = DateTime.Today.AddTicks(-fNacimiento.Ticks).Year - 1;
+            //return edad.ToString();
+            int age = 0;
+            age = DateTime.Now.Year - fNacimiento.Year;
+            if (DateTime.Now.DayOfYear < fNacimiento.DayOfYear)
+                age = age - 1;
+
+            return age.ToString();
         }
 
         public string fechaLarga(string fecha)

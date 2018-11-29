@@ -68,6 +68,7 @@ namespace Solicitudes
 
         private void button3_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string pathString = System.IO.Path.Combine(path, "CintasNegras\\" + DateTime.Now.Year.ToString());
 
@@ -76,20 +77,13 @@ namespace Solicitudes
             
             //int ti = 0;
             foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                try
-                {                   
-
-                    ReplacePdfForm(pathString, INFOMADE.nuevogrado(row.Cells[0].Value.ToString(), Convert.ToInt16(row.Cells[4].Value)), row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString());                    
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                
+            {                
+                ReplacePdfForm(pathString, INFOMADE.nuevogrado(row.Cells[0].Value.ToString(), Convert.ToInt16(row.Cells[4].Value),true), INFOMADE.gradoActual(row.Cells[0].Value.ToString(), Convert.ToInt16(row.Cells[4].Value), true), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString());                    
+                                
             }
 
             dataGridView1.Rows.Clear();
+            splashScreenManager1.CloseWaitForm();
             MessageBox.Show("Solicitudes creadas");
         }
 
@@ -224,7 +218,7 @@ namespace Solicitudes
                                 form.SetField(fieldKey, parciales);
                                 break;
                             case (4):
-                                form.SetField(fieldKey, txt_nombre.Text);
+                                form.SetField(fieldKey, nombre);
                                 break;
                             case (5):
                                 form.SetField(fieldKey, INFOMADE.fechaLarga(fNacimiento));
