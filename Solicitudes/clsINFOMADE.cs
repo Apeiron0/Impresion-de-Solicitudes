@@ -66,6 +66,11 @@ namespace Solicitudes
 
         public string gradoActual(string grado, int edad)
         {
+            return gradoActual(grado, edad, false);
+        }
+
+        public string gradoActual(string grado, int edad, bool cn)
+        {
             switch (grado.Trim())
             {
                 case "PRINCIPIANTE":
@@ -91,6 +96,8 @@ namespace Solicitudes
                 case "1°   - Roja":
                     return "1° KUP";
                 case "IEBY DAN/POOM":
+                    if (cn)
+                        return "IEBY";
                     if (edad < 17)
                     {
                         return "IEBY POOM";
@@ -100,6 +107,8 @@ namespace Solicitudes
                         return "IEBY DAN";
                     }
                 case "1° DAN/POOM":
+                    if (cn)
+                        return "1º";
                     if (edad < 17)
                     {
                         return "1° POOM";
@@ -109,6 +118,8 @@ namespace Solicitudes
                         return "1° DAN";
                     }
                 case "2° DAN/POOM":
+                    if (cn)
+                        return "2º";
                     if (edad < 17)
                     {
                         return "2° POOM";
@@ -117,7 +128,9 @@ namespace Solicitudes
                     {
                         return "2° DAN";
                     }
-                case "3° DAN/POOM":
+                case "3º DAN/POOM":
+                    if (cn)
+                        return "3º";
                     if (edad < 17)
                     {
                         return "3° POOM";
@@ -126,16 +139,37 @@ namespace Solicitudes
                     {
                         return "3° DAN";
                     }
-                case "4° DAN/POOM":
+                case "4º DAN/POOM":
+                    if (cn)
+                        return "4º";
                     return "4° DAN";
-                case "5° DAN/POOM":
+                case "5º DAN/POOM":
+                    if (cn)
+                        return "5º";
                     return "5° DAN";
+                case "6º DAN/POOM":
+                    if (cn)
+                        return "6º";
+                    return "6° DAN";
+                case "7º DAN/POOM":
+                    if (cn)
+                        return "7º";
+                    return "7° DAN";
+                case "8º DAN/POOM":
+                    if (cn)
+                        return "8º";
+                    return "8° DAN";
                 default:
                     return "";
             }
         }
 
         public string nuevogrado(string grado, int edad)
+        {
+            return nuevogrado(grado, edad, false);
+        }
+
+        public string nuevogrado(string grado, int edad, bool cn)
         {
             switch (grado.Trim())
             {
@@ -169,6 +203,8 @@ namespace Solicitudes
                         return "IEBY DAN";
                     }
                 case "IEBY DAN/POOM":
+                    if (cn)
+                        return "1º";
                     if (edad < 17)
                     {
                         return "1° POOM";
@@ -178,6 +214,8 @@ namespace Solicitudes
                         return "1° DAN";
                     }
                 case "1° DAN/POOM":
+                    if (cn)
+                        return "2º";
                     if (edad < 17)
                     {
                         return "2° POOM";
@@ -187,6 +225,8 @@ namespace Solicitudes
                         return "2° DAN";
                     }
                 case "2° DAN/POOM":
+                    if (cn)
+                        return "3º";
                     if (edad < 17)
                     {
                         return "3° POOM";
@@ -195,15 +235,30 @@ namespace Solicitudes
                     {
                         return "3° DAN";
                     }
-                case "3° DAN/POOM":
+                case "3º DAN/POOM":
+                    if (cn)
+                        return "4º";
                     return "4° DAN";
-                case "4° DAN/POOM":
+                case "4º DAN/POOM":
+                    if (cn)
+                        return "5º";
                     return "5° DAN";
-                case "5° DAN/POOM":
+                case "5º DAN/POOM":
+                    if (cn)
+                        return "6º";
                     return "6° DAN";
+                case "6º DAN/POOM":
+                    if (cn)
+                        return "7º";
+                    return "7° DAN";
+                case "7º DAN/POOM":
+                    return "8° DAN";
+                case "8º DAN/POOM":
+                    return "9° DAN";
                 default:
                     return "";
             }
         }
+
     }
 }
