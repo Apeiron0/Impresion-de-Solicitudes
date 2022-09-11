@@ -33,7 +33,7 @@ namespace Solicitudes
             try
             {
                 //dataGridView1.Rows.Insert(dataGridView1.Rows.Count, mtb_fExamen.Text, cb_grado.Text, tb_nombre.Text, mtb_fNacimiento.Text, calcular_edad(mtb_fNacimiento.Text), mtb_fExamenAnterior.Text, mtb_fIngreso.Text);
-                dataGridView1.Rows.Insert(dataGridView1.Rows.Count, mtb_fExamen.Text, cb_grado.Text, tb_nombre.Text, mtb_fNacimiento.Text, infomade.calcular_edad(Convert.ToDateTime(mtb_fNacimiento.Text)), mtb_fExamenAnterior.Text, mtb_fIngreso.Text);
+                dataGridView1.Rows.Insert(dataGridView1.Rows.Count, mtb_fExamen.Text, cb_grado.Text, tb_nombre.Text, mtb_fNacimiento.Text, infomade.calcular_edad(Convert.ToDateTime(mtb_fNacimiento.Text)), mtb_fExamenAnterior.Text, mtb_fIngreso.Text,textBox_ocupacion.Text, trackBarControl1.Value.ToString());
                 tb_nombre.Clear();                
                 mtb_fIngreso.Clear();
                 mtb_fNacimiento.Clear();
@@ -68,7 +68,7 @@ namespace Solicitudes
             mtb_fExamenAnterior.Text = fecha;            
         }
 
-        public void ReplacePdfForm(string outputhpath, string newGrado, string fExamen, string gActual, string nombre, string fNacimiento, string edad, string examenAnterior, string fIngreso)
+        public void ReplacePdfForm(string outputhpath, string newGrado, string fExamen, string gActual, string nombre, string fNacimiento, string edad, string examenAnterior, string fIngreso, int asistencia, string ocupacion)
         {
 
             try
@@ -109,24 +109,63 @@ namespace Solicitudes
                                 break;
                             case (3):
                                 form.SetField(fieldKey, newGrado );
-                                break;
-                            case (4):
+                                break;                            
+                            case (5):
                                 form.SetField(fieldKey, nombre);
                                 break;
-                            case (5):
+                            case (6):
                                 form.SetField(fieldKey,infomade.fechaLarga(fNacimiento));
                                 break;
-                            case (6):
+                            case (7):
                                 form.SetField(fieldKey,edad);
                                 break;
-                            case (7):
-                                form.SetField(fieldKey,infomade.fechaLarga( examenAnterior ));
-                                break;
                             case (8):
-                                form.SetField(fieldKey,infomade.fechaLarga( fIngreso));
+                                form.SetField(fieldKey, ocupacion);
                                 break;
                             case (9):
+                                form.SetField(fieldKey,infomade.fechaLarga( examenAnterior ));
+                                break;
+                            case (10):
+                                form.SetField(fieldKey,infomade.fechaLarga( fIngreso));
+                                break;
+                            case (11):
                                 form.SetField(fieldKey,infomade.fechaLarga( fExamen));
+                                break;
+                            case (12):
+                                if (Convert.ToInt32(edad) < 6)
+                                {
+                                    form.SetField(fieldKey, "X");
+                                }
+                                break;
+                            case (13):
+                                if (Convert.ToInt32(edad) >= 6 && Convert.ToInt32(edad) < 14)
+                                {
+                                    form.SetField(fieldKey, "X");
+                                }
+                                break;
+                            case (14):
+                                if (Convert.ToInt32(edad) >= 14 && Convert.ToInt32(edad) < 18)
+                                {
+                                    form.SetField(fieldKey, "X");
+                                }
+                                break;
+                            case (15):
+                                if (Convert.ToInt32(edad) >= 18 && Convert.ToInt32(edad) < 39)
+                                {
+                                    form.SetField(fieldKey, "X");
+                                }
+                                break;
+                            case (16):
+                                if (Convert.ToInt16(edad) >= 39)
+                                {
+                                    form.SetField(fieldKey, "X");
+                                }
+                                break;
+                            case (17):
+                                form.SetField(fieldKey, asistencia.ToString() + " %");
+                                break;
+                            case (18):
+                                form.SetField(fieldKey, (asistencia-100).ToString() + " %");
                                 break;
                             default:
                                 break;
@@ -176,10 +215,13 @@ namespace Solicitudes
                     var pdfReader = new PdfReader(existingFileStream);
 
                     // PdfStamper, which will create
-                    var stamper = new PdfStamper(pdfReader, newFileStream);
+                    var stp = new PdfStamper(pdfReader, newFileStream);
+
+                    var stamper = stp;
 
                     var form = stamper.AcroFields;
                     var fieldKeys = form.Fields.Keys;
+                    int edad= Convert.ToInt32(infomade.calcular_edad(Convert.ToDateTime(mtb_fNacimiento.Text)));
                     int x = 1;
                     foreach (string fieldKey in fieldKeys)
                     {
@@ -195,23 +237,62 @@ namespace Solicitudes
                             case (3):
                                 form.SetField(fieldKey, infomade.nuevogrado(cb_grado.Text, Convert.ToInt16(infomade.calcular_edad(Convert.ToDateTime(mtb_fNacimiento.Text)))));
                                 break;
-                            case (4):
+                            case (5):
                                 form.SetField(fieldKey, tb_nombre.Text);
                                 break;
-                            case (5):
+                            case (6):
                                 form.SetField(fieldKey,infomade.fechaLarga(mtb_fNacimiento.Text));
                                 break;
-                            case (6):
-                                form.SetField(fieldKey, infomade.calcular_edad(Convert.ToDateTime(mtb_fNacimiento.Text)));
-                                break;
                             case (7):
-                                form.SetField(fieldKey,infomade.fechaLarga( mtb_fExamenAnterior.Text));
+                                form.SetField(fieldKey, edad.ToString());
                                 break;
                             case (8):
+                                form.SetField(fieldKey, textBox_ocupacion.Text);
+                                break;                            
+                            case (9):
+                                form.SetField(fieldKey,infomade.fechaLarga( mtb_fExamenAnterior.Text));
+                                break;
+                            case (10):
                                 form.SetField(fieldKey,infomade.fechaLarga( mtb_fIngreso.Text));
                                 break;
-                            case (9):
+                            case (11):
                                 form.SetField(fieldKey,infomade.fechaLarga( mtb_fExamen.Text));
+                                break;
+                            case (12):
+                                if (edad<6)
+                                {
+                                    form.SetField(fieldKey, "X");
+                                }
+                                break;
+                            case (13):
+                                if (edad>=6 && edad<14)
+                                {
+                                    form.SetField(fieldKey, "X");
+                                }
+                                break;
+                            case (14):
+                                if (edad >= 14 && edad < 18)
+                                {
+                                    form.SetField(fieldKey, "X");
+                                }
+                                break;
+                            case (15):
+                                if (edad >= 18 && edad < 39)
+                                {
+                                    form.SetField(fieldKey, "X");
+                                }
+                                break;
+                            case (16):
+                                if (edad >= 39)
+                                {
+                                    form.SetField(fieldKey, "X");
+                                }
+                                break;
+                            case (17):
+                                form.SetField(fieldKey, trackBarControl1.Value.ToString() + " %");
+                                break;
+                            case (18):
+                                form.SetField(fieldKey, (trackBarControl1.Value-100).ToString() + " %");
                                 break;
                             default:
                                 break;
@@ -259,8 +340,8 @@ namespace Solicitudes
             {
                 //(string outputhpath, string newGrado, string fExamen, string gActual, string nombre, string fNacimiento, string edad, string examenAnterior, string fIngreso)
                 //ReplacePdfForm(pathString, "1","2","3","4","5","6","7","8", "9");
-                ReplacePdfForm(pathString,infomade.nuevogrado(row.Cells[1].Value.ToString(),Convert.ToInt16(row.Cells[4].Value)), row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString());
-                //ReplacePdfForm( pathString,row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), "8","9");                                
+                ReplacePdfForm(pathString,infomade.nuevogrado(row.Cells[1].Value.ToString(),Convert.ToInt32(row.Cells[4].Value)), row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), Convert.ToInt32(row.Cells[8].Value), row.Cells[7].Value.ToString());
+                //ReplacePdfForm( pathString,row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), "8","9"); 
             }
 
             dataGridView1.Rows.Clear();
